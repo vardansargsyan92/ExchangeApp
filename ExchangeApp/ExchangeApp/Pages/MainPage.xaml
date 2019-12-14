@@ -4,16 +4,89 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    x:Name="This"
+    mvvm:ViewModelLocator.AutowireViewModel="True"
     NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
 
-    <StackLayout>
-        <!--  Place new controls here  -->
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to Xamarin.Forms!"
+    <Grid
+        ColumnSpacing="0"
+        HorizontalOptions="FillAndExpand"
+        RowSpacing="0"
+        VerticalOptions="FillAndExpand">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackLayout />
+        <BoxView
+            Grid.Row="0"
+            Grid.Column="0"
+            BackgroundColor="#43009E"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" />
+
+        <forms:CachedImage
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="10"
+            HorizontalOptions="End"
+            Source="resource://ExchangeApp.Resources.Images.glasses.png"
+            VerticalOptions="Start" />
+
+        <forms:CachedImage
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalOptions="End"
+            Source="resource://ExchangeApp.Resources.Images.evocabg.png"
+            VerticalOptions="FillAndExpand" />
+        <forms:CachedImage
+            x:Name="CachedImage"
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="50"
+            Aspect="AspectFill"
+            HeightRequest="60"
+            HorizontalOptions="FillAndExpand"
+            Source="resource://ExchangeApp.Resources.Images.logoBlack.png"
             VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+
+        <Grid
+            Grid.Row="0"
+            Grid.Column="1"
+            BackgroundColor="Black"
+            RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <forms:CachedImage
+                Grid.Row="0"
+                Grid.RowSpan="8"
+                Aspect="AspectFill"
+                HorizontalOptions="FillAndExpand"
+                Source="resource://ExchangeApp.Resources.Images.dashboard.png"
+                VerticalOptions="FillAndExpand" />
+            <Label
+                Grid.Row="0"
+                Margin="20,50,20,10"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                Text="Welcome"
+                TextColor="White"
+                VerticalOptions="Center" />
+
+        </Grid>
+
+    </Grid>
 
 </ContentPage>

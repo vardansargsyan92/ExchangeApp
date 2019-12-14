@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -9,6 +9,26 @@
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Images\bg.jpg" />
+    <None Remove="Resources\Images\dashboard.png" />
+    <None Remove="Resources\Images\evoca.jpg" />
+    <None Remove="Resources\Images\evocabg.png" />
+    <None Remove="Resources\Images\glasses.png" />
+    <None Remove="Resources\Images\logo.png" />
+    <None Remove="Resources\Images\logoBlack.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\bg.jpg" />
+    <EmbeddedResource Include="Resources\Images\dashboard.png" />
+    <EmbeddedResource Include="Resources\Images\evoca.jpg" />
+    <EmbeddedResource Include="Resources\Images\evocabg.png" />
+    <EmbeddedResource Include="Resources\Images\glasses.png" />
+    <EmbeddedResource Include="Resources\Images\logo.png" />
+    <EmbeddedResource Include="Resources\Images\logoBlack.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CardsView" Version="2.3.8" />
