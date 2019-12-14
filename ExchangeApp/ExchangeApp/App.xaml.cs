@@ -1,16 +1,15 @@
-﻿using System;
+﻿using ExchangeApp.Pages;
+using Prism;
+using Prism.Ioc;
+using Prism.Unity;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace ExchangeApp
 {
-    public partial class App : Application
+    public partial class App
     {
-        public App()
+        public App(IPlatformInitializer initializer = null) : base(initializer)
         {
-            InitializeComponent();
-
-            MainPage = new MainPage();
         }
 
         protected override void OnStart()
@@ -19,6 +18,21 @@ namespace ExchangeApp
 
         protected override void OnSleep()
         {
+        }
+
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            var container = containerRegistry.GetContainer();
+
+            containerRegistry.RegisterAppDependencies();
+
+
+            ServiceLocator.Container = container;
+        }
+
+        protected override void OnInitialized()
+        {
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnResume()

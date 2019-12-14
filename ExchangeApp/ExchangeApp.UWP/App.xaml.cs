@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
@@ -14,6 +15,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+
 
 namespace ExchangeApp.UWP
 {
@@ -52,7 +54,18 @@ namespace ExchangeApp.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                Xamarin.Forms.Forms.Init(e);
+                List<Assembly> assemblies = new List<Assembly>
+                {
+                    typeof(Xamarin.Forms.Xaml.Extensions).GetTypeInfo().Assembly,
+                    typeof(PanCardView.CardsView).GetTypeInfo().Assembly,
+                    typeof(PanCardView.CoverFlowView).GetTypeInfo().Assembly,
+                    typeof(PanCardView.CarouselView).GetTypeInfo().Assembly,
+                    typeof(PanCardView.CubeView).GetTypeInfo().Assembly,
+                    typeof(FFImageLoading.Transformations.CircleTransformation).GetTypeInfo().Assembly,
+                    typeof(Prism.Navigation.PageNavigationService).GetTypeInfo().Assembly
+                };
+
+                Xamarin.Forms.Forms.Init(e, assemblies.ToArray());
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
