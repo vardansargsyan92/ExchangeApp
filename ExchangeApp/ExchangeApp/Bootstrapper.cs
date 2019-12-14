@@ -21,6 +21,7 @@ namespace ExchangeApp
             //Core
             container.RegisterType<IConfigurationProvider, DevelopmentConfigurationProvider>();
             container.RegisterType<IDataClient, WebDataClient>();
+            container.RegisterType<IApiService, RestApiService>();
 
             //ViewModels
             container.RegisterType<IMainViewModel, MainViewModel>();

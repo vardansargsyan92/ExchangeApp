@@ -22,13 +22,6 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackLayout />
-        <!--<BoxView
-            Grid.Row="0"
-            Grid.Column="0"
-            BackgroundColor="#43009E"
-            HorizontalOptions="FillAndExpand"
-            VerticalOptions="FillAndExpand" />-->
-
         <forms:CachedImage
             Grid.Row="0"
             Grid.Column="0"
@@ -95,7 +88,7 @@
                         Aspect="AspectFill"
                         HeightRequest="40"
                         HorizontalOptions="Start"
-                        Source="resource://ExchangeApp.Resources.Images.armenia.png"
+                        Source="resource://ExchangeApp.Resources.Images.flagAMD.png"
                         VerticalOptions="Center"
                         WidthRequest="40" />
                     <Label

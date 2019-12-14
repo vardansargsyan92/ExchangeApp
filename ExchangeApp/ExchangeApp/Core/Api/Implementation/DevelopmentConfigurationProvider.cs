@@ -2,6 +2,6 @@
 {
     public class DevelopmentConfigurationProvider : IConfigurationProvider
     {
-        public string BaseAddress => "http://51.15.70.207:5000/api/";
+        public string BaseAddress => "http://192.168.43.189:9550/api/v1/converter/";
     }
 }

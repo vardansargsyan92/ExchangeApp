@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ExchangeApp.Core.Api;
 using ExchangeApp.ViewModels.Base;
 using ExchangeApp.ViewModels.Base.Implementation;
 using Prism.Navigation;
@@ -9,9 +10,9 @@ namespace ExchangeApp.ViewModels.ChooseCountry.Implementation
     [AddINotifyPropertyChangedInterface]
     internal class ChooseCountryViewModel : BaseNavigationViewModel, IChooseCountryViewModel
     {
-        public ChooseCountryViewModel()
+        public ChooseCountryViewModel(IApiService apiService)
         {
-            FetchCountriesCommand = new FetchCountriesCommand(this);
+            FetchCountriesCommand = new FetchCountriesCommand(apiService, this);
         }
 
         public override void OnNavigatedTo(NavigationParameters parameters)
