@@ -11,23 +11,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\armenia.png" />
     <None Remove="Resources\Images\bg.jpg" />
+    <None Remove="Resources\Images\canada.png" />
     <None Remove="Resources\Images\dashboard.png" />
+    <None Remove="Resources\Images\european-union.png" />
     <None Remove="Resources\Images\evoca.jpg" />
     <None Remove="Resources\Images\evocabg.png" />
     <None Remove="Resources\Images\glasses.png" />
     <None Remove="Resources\Images\logo.png" />
     <None Remove="Resources\Images\logoBlack.png" />
+    <None Remove="Resources\Images\russia.png" />
+    <None Remove="Resources\Images\switzerland.png" />
+    <None Remove="Resources\Images\united-kingdom.png" />
+    <None Remove="Resources\Images\united-states.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\armenia.png" />
     <EmbeddedResource Include="Resources\Images\bg.jpg" />
+    <EmbeddedResource Include="Resources\Images\canada.png" />
     <EmbeddedResource Include="Resources\Images\dashboard.png" />
+    <EmbeddedResource Include="Resources\Images\european-union.png" />
     <EmbeddedResource Include="Resources\Images\evoca.jpg" />
     <EmbeddedResource Include="Resources\Images\evocabg.png" />
     <EmbeddedResource Include="Resources\Images\glasses.png" />
     <EmbeddedResource Include="Resources\Images\logo.png" />
     <EmbeddedResource Include="Resources\Images\logoBlack.png" />
+    <EmbeddedResource Include="Resources\Images\russia.png" />
+    <EmbeddedResource Include="Resources\Images\switzerland.png" />
+    <EmbeddedResource Include="Resources\Images\united-kingdom.png" />
+    <EmbeddedResource Include="Resources\Images\united-states.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -52,10 +66,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Resources\Strings\CommonStrings.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -68,5 +78,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CommonStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\ChooseCountry\" />
   </ItemGroup>
 </Project>
