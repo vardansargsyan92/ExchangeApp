@@ -17,33 +17,33 @@ namespace ExchangeApp.Pages
 
         private void OnSelectNumber(object sender, EventArgs e)
         {
-            //var button = (Button) sender;
-            //var pressed = button.Text;
+            var button = (Button)sender;
+            var pressed = button.Text;
 
-            //if (resultText.Text == "0") resultText.Text = "";
+            if (InputAmount.Text == "0") InputAmount.Text = "";
 
-            //resultText.Text += pressed;
+            InputAmount.Text += pressed;
         }
 
         private void OnClear(object sender, EventArgs e)
         {
-            //resultText.Text = "0";
+            InputAmount.Text = "0";
         }
 
         private void OnDotPressed(object sender, EventArgs e)
         {
-            //var button = (Button) sender;
-            //var pressed = button.Text;
-            //var contains = resultText.Text.Contains(".");
-            //if (contains == false) resultText.Text += pressed;
+            var button = (Button)sender;
+            var pressed = button.Text;
+            var contains = InputAmount.Text.Contains(".");
+            if (contains == false) InputAmount.Text += pressed;
         }
 
         private void OnDeleteClicked(object sender, EventArgs e)
         {
-            //if (resultText.Text != "0" && resultText.Text.Length > 1)
-            //    resultText.Text = resultText.Text.Remove(resultText.Text.Length - 1);
-            //else
-            //    resultText.Text = "0";
+            if (InputAmount.Text != "0" && InputAmount.Text.Length > 1)
+                InputAmount.Text = InputAmount.Text.Remove(InputAmount.Text.Length - 1);
+            else
+                InputAmount.Text = "0";
         }
     }
 }

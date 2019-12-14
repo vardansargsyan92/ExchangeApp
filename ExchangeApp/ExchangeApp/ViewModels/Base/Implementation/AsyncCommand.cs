@@ -41,11 +41,11 @@ namespace ExchangeApp.ViewModels.Base.Implementation
         {
             if (IsBusy)
             {
-                Debug.WriteLine("{Command} was already executing. Cancelling recurrent execution.", CommandName);
+               // Debug.WriteLine("{Command} was already executing. Cancelling recurrent execution.", CommandName);
                 return;
             }
 
-            Debug.WriteLine("{Command} execution started with {@Parameter}.", CommandName, parameter);
+           // Debug.WriteLine("{Command} execution started with {@Parameter}.", CommandName, parameter);
             //Reset the state of the command
             IsBusy = true;
             IsSuccessful = false;
@@ -53,7 +53,7 @@ namespace ExchangeApp.ViewModels.Base.Implementation
             try
             {
                 IsSuccessful = await ExecuteCoreAsync(parameter, token);
-                Debug.WriteLine("{Command} execution completed with result {Result}.", CommandName, IsSuccessful);
+               // Debug.WriteLine("{Command} execution completed with result {Result}.", CommandName, IsSuccessful);
             }
             catch (Exception ex)
             {
@@ -88,7 +88,7 @@ namespace ExchangeApp.ViewModels.Base.Implementation
         protected virtual void HandleException(Exception exception)
         {
             FailureMessage = CommonStrings.GeneralFailureMessage;
-            Debug.WriteLine(exception.ToString(), "{Command} execution failed with exception.", CommandName);
+           // Debug.WriteLine(exception.ToString(), "{Command} execution failed with exception.", CommandName);
         }
     }
 }

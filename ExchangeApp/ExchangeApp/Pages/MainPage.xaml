@@ -82,24 +82,45 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 Grid.ColumnSpan="4"
+                Padding="10"
+                HorizontalOptions="FillAndExpand"
                 Orientation="Vertical"
                 Spacing="10">
-                <StackLayout Orientation="Horizontal" />
-
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="20">
+                    <forms:CachedImage
+                        x:Name="FromCountryFlag"
+                        Aspect="AspectFill"
+                        HeightRequest="40"
+                        HorizontalOptions="Start"
+                        Source="resource://ExchangeApp.Resources.Images.armenia.png"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+                    <Label
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        FontSize="30"
+                        HorizontalTextAlignment="Start"
+                        Text="AMD"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+                    <Label
+                        x:Name="InputAmount"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        FontSize="30"
+                        HorizontalTextAlignment="End"
+                        LineBreakMode="NoWrap"
+                        Text="{Binding InputAmount, Mode=TwoWay}"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ChooseFromCountryCommand}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
             </StackLayout>
-            <!--<Label
-                x:Name="resultText"
-                Grid.Row="0"
-                Grid.Column="0"
-                Grid.ColumnSpan="4"
-                BackgroundColor="White"
-                FontAttributes="Bold"
-                FontSize="48"
-                HorizontalTextAlignment="End"
-                LineBreakMode="NoWrap"
-                Text="0"
-                TextColor="Gray"
-                VerticalTextAlignment="Center" />-->
 
             <Button
                 Grid.Row="1"
