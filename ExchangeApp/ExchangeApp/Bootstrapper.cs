@@ -1,4 +1,6 @@
-﻿using ExchangeApp.Pages;
+﻿using ExchangeApp.Core.Api;
+using ExchangeApp.Core.Api.Implementation;
+using ExchangeApp.Pages;
 using ExchangeApp.ViewModels.ChooseCountry;
 using ExchangeApp.ViewModels.ChooseCountry.Implementation;
 using ExchangeApp.ViewModels.Main;
@@ -15,6 +17,10 @@ namespace ExchangeApp
         public static IContainerRegistry RegisterAppDependencies(this IContainerRegistry containerRegistry)
         {
             var container = containerRegistry.GetContainer();
+
+            //Core
+            container.RegisterType<IConfigurationProvider, DevelopmentConfigurationProvider>();
+            container.RegisterType<IDataClient, WebDataClient>();
 
             //ViewModels
             container.RegisterType<IMainViewModel, MainViewModel>();
