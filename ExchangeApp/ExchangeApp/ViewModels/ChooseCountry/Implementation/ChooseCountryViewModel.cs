@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using ExchangeApp.Core.Api;
 using ExchangeApp.ViewModels.Base;
 using ExchangeApp.ViewModels.Base.Implementation;
@@ -22,6 +23,6 @@ namespace ExchangeApp.ViewModels.ChooseCountry.Implementation
         }
 
         public IAsyncCommand FetchCountriesCommand { get; }
-        public IList<CountryViewModel> Countries { get; }
+        public ObservableCollection<CountryViewModel> Countries { get; internal set; }
     }
 }

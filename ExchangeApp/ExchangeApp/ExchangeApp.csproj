@@ -25,6 +25,7 @@
     <None Remove="Resources\Images\glasses.png" />
     <None Remove="Resources\Images\logo.png" />
     <None Remove="Resources\Images\logoBlack.png" />
+    <None Remove="Resources\Images\main.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,6 +43,7 @@
     <EmbeddedResource Include="Resources\Images\flagCHF.png" />
     <EmbeddedResource Include="Resources\Images\flagGBP.png" />
     <EmbeddedResource Include="Resources\Images\flagUSD.png" />
+    <EmbeddedResource Include="Resources\Images\main.png" />
   </ItemGroup>
 
   <ItemGroup>

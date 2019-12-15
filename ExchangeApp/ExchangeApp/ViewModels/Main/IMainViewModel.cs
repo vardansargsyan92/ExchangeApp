@@ -6,5 +6,9 @@ namespace ExchangeApp.ViewModels.Main
     {
         IAsyncCommand ChooseFromCountryCommand { get; }
         string InputAmount { get; set; }
+        string ResultAmount { get; }
+        string ResultCurrencyFlag { get; }
+        double ResultCurrencyValue { get; }
+        string ResultCurrencyName { get; }
     }
 }
