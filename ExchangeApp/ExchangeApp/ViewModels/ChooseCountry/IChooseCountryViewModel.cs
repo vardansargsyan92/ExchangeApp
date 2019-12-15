@@ -6,6 +6,9 @@ using PropertyChanged;
 
 namespace ExchangeApp.ViewModels.ChooseCountry
 {
+
+
+
     [AddINotifyPropertyChangedInterface]
     public class CountryViewModel : BaseBindableObject
     {
@@ -19,6 +22,8 @@ namespace ExchangeApp.ViewModels.ChooseCountry
     public interface IChooseCountryViewModel : INavigationViewModel
     {
         IAsyncCommand FetchCountriesCommand { get; }
+
+        IAsyncCommand SelectCurrencyCommand { get; }
 
         ObservableCollection<CountryViewModel> Countries { get; }
     }

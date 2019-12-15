@@ -45,6 +45,7 @@
                 HorizontalOptions="FillAndExpand"
                 IsVisible="{Binding FetchCountriesCommand.IsSuccessful}"
                 ItemsSource="{Binding Countries}"
+                SelectionChanged="OnCurrencySelected"
                 SelectionMode="Single"
                 VerticalOptions="FillAndExpand">
                 <CollectionView.ItemTemplate>
