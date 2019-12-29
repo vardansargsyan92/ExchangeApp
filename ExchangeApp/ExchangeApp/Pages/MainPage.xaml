@@ -22,7 +22,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackLayout />
-        <forms:CachedImage
+        <!--<forms:CachedImage
             Grid.Row="0"
             Grid.Column="0"
             Margin="10"
@@ -35,17 +35,23 @@
             Grid.Column="0"
             HorizontalOptions="End"
             Source="resource://ExchangeApp.Resources.Images.evocabg.png"
+            VerticalOptions="FillAndExpand" />-->
+        <BoxView
+            Grid.Row="0"
+            Grid.Column="0"
+            BackgroundColor="#333333"
+            HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand" />
         <forms:CachedImage
             x:Name="CachedImage"
             Grid.Row="0"
             Grid.Column="0"
             Margin="50"
-            HeightRequest="60"
+            HeightRequest="250"
             HorizontalOptions="CenterAndExpand"
-            Source="resource://ExchangeApp.Resources.Images.logo.png"
+            Source="resource://ExchangeApp.Resources.Images.IDBankLogo.png"
             VerticalOptions="CenterAndExpand"
-            WidthRequest="240" />
+            WidthRequest="380" />
 
         <Grid
             Grid.Row="0"
@@ -270,41 +276,41 @@
             <Button
                 Grid.Row="1"
                 Grid.Column="3"
-                BackgroundColor="#43009E"
+                BackgroundColor="#F88224"
                 Command="{Binding InDemoVersionCommand}"
                 CornerRadius="5"
                 FontSize="28"
-                Opacity="0.6"
+                Opacity="0.9"
                 Text="Վերև"
                 TextColor="White" />
             <Button
                 Grid.Row="2"
                 Grid.Column="3"
-                BackgroundColor="#43009E"
+                BackgroundColor="#F88224"
                 Command="{Binding InDemoVersionCommand}"
                 CornerRadius="5"
                 FontSize="28"
-                Opacity="0.6"
+                Opacity="0.9"
                 Text="Ներքև"
                 TextColor="White" />
             <Button
                 Grid.Row="3"
                 Grid.Column="3"
-                BackgroundColor="#43009E"
+                BackgroundColor="#F88224"
                 Command="{Binding InDemoVersionCommand}"
                 CornerRadius="5"
                 FontSize="28"
-                Opacity="0.6"
+                Opacity="0.9"
                 Text="Ցանկ"
                 TextColor="White" />
             <Button
                 Grid.Row="4"
                 Grid.Column="3"
-                BackgroundColor="#43009E"
+                BackgroundColor="#F88224"
                 Command="{Binding DeclineCommand}"
                 CornerRadius="5"
                 FontSize="28"
-                Opacity="0.6"
+                Opacity="0.9"
                 Text="Չեղարկել"
                 TextColor="White" />
 
@@ -323,11 +329,11 @@
                 Grid.Row="5"
                 Grid.Column="1"
                 Grid.ColumnSpan="3"
-                BackgroundColor="#43009E"
+                BackgroundColor="#F88224"
                 Command="{Binding ConfirmCommand}"
                 CornerRadius="5"
                 FontSize="28"
-                Opacity="0.6"
+                Opacity="0.9"
                 Text="Հաստատել"
                 TextColor="White" />
 

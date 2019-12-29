@@ -8,6 +8,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -64,6 +65,27 @@ namespace ExchangeApp.UWP
                     typeof(FFImageLoading.Transformations.CircleTransformation).GetTypeInfo().Assembly,
                     typeof(Prism.Navigation.PageNavigationService).GetTypeInfo().Assembly
                 };
+
+
+                // using Windows.UI.ViewManagement;
+
+                var titleBar = ApplicationView.GetForCurrentView().TitleBar;
+
+                // Set active window colors
+                titleBar.ForegroundColor = Windows.UI.Colors.White;
+                titleBar.BackgroundColor = Windows.UI.Colors.DarkOrange;
+                titleBar.ButtonForegroundColor = Windows.UI.Colors.White;
+                titleBar.ButtonBackgroundColor = Windows.UI.Colors.DarkOrange;
+                titleBar.ButtonHoverForegroundColor = Windows.UI.Colors.White;
+                titleBar.ButtonHoverBackgroundColor = Windows.UI.Colors.DarkOrange;
+                titleBar.ButtonPressedForegroundColor = Windows.UI.Colors.Gray;
+                titleBar.ButtonPressedBackgroundColor = Windows.UI.Colors.Orange;
+
+                // Set inactive window colors
+                titleBar.InactiveForegroundColor = Windows.UI.Colors.Gray;
+                titleBar.InactiveBackgroundColor = Windows.UI.Colors.Orange;
+                titleBar.ButtonInactiveForegroundColor = Windows.UI.Colors.Gray;
+                titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.Orange;
 
                 Xamarin.Forms.Forms.Init(e, assemblies.ToArray());
 

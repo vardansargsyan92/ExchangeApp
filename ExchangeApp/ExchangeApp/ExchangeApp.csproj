@@ -23,9 +23,12 @@
     <None Remove="Resources\Images\flagRUB.png" />
     <None Remove="Resources\Images\flagUSD.png" />
     <None Remove="Resources\Images\glasses.png" />
+    <None Remove="Resources\Images\IDBankLogo.png" />
     <None Remove="Resources\Images\logo.png" />
     <None Remove="Resources\Images\logoBlack.png" />
     <None Remove="Resources\Images\main.png" />
+    <None Remove="Resources\Images\manage1.svg" />
+    <None Remove="Resources\Images\masterPlan.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +40,7 @@
     <EmbeddedResource Include="Resources\Images\evoca.jpg" />
     <EmbeddedResource Include="Resources\Images\evocabg.png" />
     <EmbeddedResource Include="Resources\Images\glasses.png" />
+    <EmbeddedResource Include="Resources\Images\IDBankLogo.png" />
     <EmbeddedResource Include="Resources\Images\logo.png" />
     <EmbeddedResource Include="Resources\Images\logoBlack.png" />
     <EmbeddedResource Include="Resources\Images\flagRUB.png" />
@@ -44,6 +48,8 @@
     <EmbeddedResource Include="Resources\Images\flagGBP.png" />
     <EmbeddedResource Include="Resources\Images\flagUSD.png" />
     <EmbeddedResource Include="Resources\Images\main.png" />
+    <EmbeddedResource Include="Resources\Images\manage1.svg" />
+    <EmbeddedResource Include="Resources\Images\masterPlan.png" />
   </ItemGroup>
 
   <ItemGroup>
