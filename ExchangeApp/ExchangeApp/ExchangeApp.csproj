@@ -11,10 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\ameriaLogo.png" />
     <None Remove="Resources\Images\bg.jpg" />
     <None Remove="Resources\Images\dashboard.png" />
     <None Remove="Resources\Images\evoca.jpg" />
     <None Remove="Resources\Images\evocabg.png" />
+    <None Remove="Resources\Images\fitting_piece_iilo.png" />
     <None Remove="Resources\Images\flagAMD.png" />
     <None Remove="Resources\Images\flagCAD.png" />
     <None Remove="Resources\Images\flagCHF.png" />
@@ -29,9 +31,14 @@
     <None Remove="Resources\Images\main.png" />
     <None Remove="Resources\Images\manage1.svg" />
     <None Remove="Resources\Images\masterPlan.png" />
+    <None Remove="Resources\Images\undraw_inspiration_lecl.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\ameriaLogo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Images\fitting_piece_iilo.png" />
     <EmbeddedResource Include="Resources\Images\flagAMD.png" />
     <EmbeddedResource Include="Resources\Images\bg.jpg" />
     <EmbeddedResource Include="Resources\Images\flagCAD.png" />
@@ -71,6 +78,10 @@
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\undraw_inspiration_lecl.png" />
   </ItemGroup>
 
   <ItemGroup>

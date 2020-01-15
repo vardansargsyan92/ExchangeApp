@@ -73,19 +73,19 @@ namespace ExchangeApp.UWP
 
                 // Set active window colors
                 titleBar.ForegroundColor = Windows.UI.Colors.White;
-                titleBar.BackgroundColor = Windows.UI.Colors.DarkOrange;
+                titleBar.BackgroundColor = Windows.UI.Colors.DarkGreen;
                 titleBar.ButtonForegroundColor = Windows.UI.Colors.White;
-                titleBar.ButtonBackgroundColor = Windows.UI.Colors.DarkOrange;
+                titleBar.ButtonBackgroundColor = Windows.UI.Colors.DarkGreen;
                 titleBar.ButtonHoverForegroundColor = Windows.UI.Colors.White;
-                titleBar.ButtonHoverBackgroundColor = Windows.UI.Colors.DarkOrange;
+                titleBar.ButtonHoverBackgroundColor = Windows.UI.Colors.DarkGreen;
                 titleBar.ButtonPressedForegroundColor = Windows.UI.Colors.Gray;
-                titleBar.ButtonPressedBackgroundColor = Windows.UI.Colors.Orange;
+                titleBar.ButtonPressedBackgroundColor = Windows.UI.Colors.Green;
 
                 // Set inactive window colors
                 titleBar.InactiveForegroundColor = Windows.UI.Colors.Gray;
-                titleBar.InactiveBackgroundColor = Windows.UI.Colors.Orange;
+                titleBar.InactiveBackgroundColor = Windows.UI.Colors.Green;
                 titleBar.ButtonInactiveForegroundColor = Windows.UI.Colors.Gray;
-                titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.Orange;
+                titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.Green;
 
                 Xamarin.Forms.Forms.Init(e, assemblies.ToArray());
 

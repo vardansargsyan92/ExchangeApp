@@ -11,8 +11,8 @@
     xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
     x:Name="This"
     mvvm:ViewModelLocator.AutowireViewModel="True"
-    NavigationPage.HasNavigationBar="False"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
@@ -21,8 +21,8 @@
 
     <Grid
         ColumnSpacing="0"
-        HorizontalOptions="FillAndExpand"
         RowSpacing="0"
+        HorizontalOptions="FillAndExpand"
         VerticalOptions="FillAndExpand">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -32,74 +32,74 @@
         <forms:CachedImage
             Grid.Row="0"
             Grid.Column="1"
-            Aspect="AspectFill"
-            HorizontalOptions="FillAndExpand"
+            Source="resource://ExchangeApp.Resources.Images.undraw_inspiration_lecl.png"
+            Aspect="AspectFit"
             Opacity="0.9"
-            Source="resource://ExchangeApp.Resources.Images.masterPlan.png"
+            HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand" />
         <Grid
             Grid.Column="0"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand">
             <CollectionView
-                HorizontalOptions="FillAndExpand"
-                IsVisible="{Binding FetchCountriesCommand.IsSuccessful}"
                 ItemsSource="{Binding Countries}"
+                IsVisible="{Binding FetchCountriesCommand.IsSuccessful}"
                 SelectionChanged="OnCurrencySelected"
                 SelectionMode="Single"
+                HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout
+                            Orientation="Horizontal"
+                            Spacing="30"
                             Padding="5"
                             HeightRequest="60"
                             HorizontalOptions="FillAndExpand"
-                            Orientation="Horizontal"
-                            Spacing="30"
                             VerticalOptions="FillAndExpand">
                             <forms:CachedImage
                                 x:Name="FromCountryFlag"
+                                Source="{Binding FlagPath}"
                                 Aspect="AspectFill"
+                                WidthRequest="60"
                                 HeightRequest="60"
                                 HorizontalOptions="Start"
-                                Source="{Binding FlagPath}"
-                                VerticalOptions="Center"
-                                WidthRequest="60" />
+                                VerticalOptions="Center" />
                             <Label
+                                Text="{Binding Name}"
                                 FontAttributes="Bold"
                                 FontSize="30"
-                                HorizontalTextAlignment="Start"
-                                Text="{Binding Name}"
                                 TextColor="Gray"
+                                HorizontalTextAlignment="Start"
                                 VerticalTextAlignment="Center" />
                             <Label
+                                Text="{Binding Rate}"
                                 FontAttributes="Bold"
                                 FontSize="30"
-                                HorizontalTextAlignment="End"
                                 LineBreakMode="NoWrap"
-                                Text="{Binding Rate}"
                                 TextColor="Gray"
+                                HorizontalTextAlignment="End"
                                 VerticalTextAlignment="Center" />
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <StackLayout
-                HorizontalOptions="Center"
                 IsVisible="{Binding FetchCountriesCommand.IsBusy}"
                 Orientation="Vertical"
                 Spacing="20"
+                HorizontalOptions="Center"
                 VerticalOptions="Center">
                 <Label
-                    FontSize="30"
-                    HorizontalTextAlignment="Center"
                     Text="Խնդրում ենք սպասել․․․"
+                    FontSize="30"
                     TextColor="Gray"
+                    HorizontalTextAlignment="Center"
                     VerticalOptions="Start" />
                 <ActivityIndicator
-                    HorizontalOptions="FillAndExpand"
                     IsRunning="True"
-                    Color="Gray" />
+                    Color="Gray"
+                    HorizontalOptions="FillAndExpand" />
             </StackLayout>
         </Grid>
 
